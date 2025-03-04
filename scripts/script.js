@@ -1,5 +1,5 @@
-let outputPass = document.getElementById("outputPass");
-let overlay = document.getElementById("overlay")
+const outputPass = document.getElementById("outputPass");
+const overlay = document.getElementById("overlay")
 
 const letters = "qwertyuiopasdfghjklzxcvbnm";
 const specialChars = "!@#$%^&*()_)+=-"
@@ -21,9 +21,8 @@ function generatePass () {
       } else {
          password += letters[Math.floor(Math.random()*letters.length)];
       }
-      
-      // console.log(password, randomNumberOne)
    }
+   
    outputPass.innerHTML = password;
 }
 generatePass()
