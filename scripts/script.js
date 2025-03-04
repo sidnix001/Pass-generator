@@ -2,7 +2,7 @@ const outputPass = document.getElementById("outputPass");
 const overlay = document.getElementById("overlay")
 
 const letters = "qwertyuiopasdfghjklzxcvbnm";
-const specialChars = "!@#$%^&*()_)+=-"
+const specialChars = "~!@#$%^&*()_)+=-"
 let password = "";
 const passLength = 15;
 
