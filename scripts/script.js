@@ -8,7 +8,7 @@ function genPass () {
    for (let i = 0; i < 16; i++) {
       pass += symbols[Math.floor(Math.random()*symbols.length);
    }
-   outputPass = pass;
+   outputPass.innerHTML = pass;
 }
 genPass()
 overlay.addEventListener("mousedown", genPass);
