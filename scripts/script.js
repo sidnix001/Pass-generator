@@ -1,34 +1,18 @@
 const outputPass = document.getElementById("outputPass");
 const overlay = document.getElementById("overlay")
 
-const letters = "qwertyuiopasdfghjklzxcvbnm";
-const specialChars = "~!@#$%^&*()_)+=-"
-let password = "";
-const passLength = 15;
+const symbols = "qwertyuiopasdfghjklzxcvbnm~!@#$%^&*()_)+=-1234567890";
+let pass = "";
 
-function generatePass () {
-   password = ""
-   for (let i = 0; i < passLength; i++) {
-      let randomNumberOne = Math.floor(Math.random()*10);
-      let randomNumberTwo = Math.floor(Math.random()*10);
-   
-      if (randomNumberOne == randomNumberTwo) {
-         password += letters[Math.floor(Math.random()*letters.length)].toUpperCase();   
-      } else if (randomNumberOne % 2 == 0) {
-         password += String(Math.floor(Math.random()*9))
-      } else if (randomNumberOne % 3 == 0) {
-         password += specialChars[Math.floor(Math.random()*specialChars.length)]
-      } else {
-         password += letters[Math.floor(Math.random()*letters.length)];
-      }
+function genPass () {
+   for (let i = 0; i < 16; i++) {
+      pass += symbols[Math.floor(Math.random()*symbols.length);
    }
-   
-   outputPass.innerHTML = password;
+   outputPass = pass;
 }
-generatePass()
+genPass()
+overlay.addEventListener("mousedown", genPass);
 
-overlay.addEventListener("click", generatePass);
-
-outputPass.addEventListener("click", () => {
-   navigator.clipboard.writeText((password))
+outputPass.addEventListener("mousedown", () => {
+   navigator.clipboard.writeText(pass)
 })
