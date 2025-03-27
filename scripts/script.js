@@ -1,7 +1,7 @@
-const outputPass = document.getElementById("outputPass");
-const overlay = document.getElementById("overlay")
+let outputPass = document.getElementById("outputPass");
+let overlay = document.getElementById("overlay")
 
-const symbols = "qwertyuiopasdfghjklzxcvbnm~!@#$%^&*()_)+=-1234567890";
+let symbols = "qwertyuiopasdfghjklzxcvbnm~!@#$%^&*()_)+=-1234567890";
 let pass = "";
 
 function genPass () {
