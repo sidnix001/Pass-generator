@@ -11,6 +11,7 @@ function genPass () {
    outputPass.innerHTML = pass;
 }
 genPass()
+alert(pass)
 overlay.addEventListener("mousedown", genPass);
 
 outputPass.addEventListener("mousedown", () => {
