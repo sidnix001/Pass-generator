@@ -13,7 +13,7 @@ function genPass () {
 genPass();
 
 document.addEventListener("mousedown", (event) => {
-   if (!event.target.closest("#outputPass")) {
+   if (!event.target.closest("#passElem")) {
       genPass();
    }
 });
