@@ -25,10 +25,3 @@ h1 {
 h1:active {
   transform: scale(0.9);
 }
-
-#overlay {
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  z-index: 1;
-}
