@@ -1,7 +1,7 @@
 const passElem = document.getElementById("passElem");
 
 const symbols = "qwertyuiopasdfghjklzxcvbnm~!@#$%^&*()_)+=-1234567890";
-let pass;
+let pass = "";
 
 function genPass () {
    pass = "";
