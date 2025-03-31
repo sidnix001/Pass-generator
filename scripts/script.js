@@ -1,19 +1,23 @@
-const outputPass = document.getElementById("outputPass");
-const overlay = document.getElementById("overlay");
+const passElem = document.getElementById("passElem");
 
 const symbols = "qwertyuiopasdfghjklzxcvbnm~!@#$%^&*()_)+=-1234567890";
-let pass = "";
+let pass;
 
 function genPass () {
+   pass = "";
    for (let i = 0; i < 16; i++) {
       pass += symbols[Math.floor(Math.random()*symbols.length)];
    }
-   outputPass.innerHTML = pass;
+   passElem.innerHTML = pass;
 }
 genPass();
 
-overlay.addEventListener("mousedown", genPass);
+document.addEventListener("mousedown", (event) => {
+   if (!event.target.closest("#outputPass")) {
+      genPass();
+   }
+});
 
-outputPass.addEventListener("mousedown", () => {
+passElem.addEventListener("mousedown", () => {
    navigator.clipboard.writeText(pass);
 })
