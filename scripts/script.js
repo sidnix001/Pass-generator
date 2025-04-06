@@ -18,6 +18,11 @@ document.addEventListener("mousedown", (event) => {
    }
 });
 
+let copyAlert = document.getElementById("copy-alert")
 passElem.addEventListener("mousedown", () => {
    navigator.clipboard.writeText(pass);
+   copyAlert.style.right = "0"
+   setTimeout(() => {
+      copyAlert.style.right = "-100%"
+   }, 900);
 })
