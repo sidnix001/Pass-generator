@@ -4,7 +4,7 @@
   overflow: hidden;
 }
 
-body {
+html, body {
   font-family: Arial, Helvetica, sans-serif;
   background: linear-gradient(145deg, rgba(0,89,255,1) 0%, rgba(83,222,146,1) 0%, rgba(181,83,222,1) 0%, rgba(181,83,222,1) 39%, rgba(255,81,209,1) 78%);
   display: flex;
