@@ -1,4 +1,4 @@
-const passElem = document.getElementById("passElem");
+const passElem = document.getElementById("pass-elem");
 
 const symbols = "QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm~!@#$%^&*()_)+=-1234567890";
 let pass = "";
